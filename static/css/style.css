@@ -1,0 +1,70 @@
+/* cvaar Globales */
+:root {
+    --primary-100: #FAF5FF;
+    --primary-200: #d4c2dc; /*boton de carrito*/
+    --primary-400: #99749e;
+    --primary-700: #442467; /*botones Ver Producto*/
+
+    --neutral-100: #FFFFFF;
+    --neutral-200: #EAEAEA; /* Un gris más suave */
+    --neutral-800: #434343;
+    --neutral-900: #242424;
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --font-size-etiqueta: 13px;
+    --font-size-subtitulo: 39px;
+}
+
+/* Estilos Generales */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--primary-100);
+    color: var(--neutral-900);
+    margin: 0;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 68px 1fr;
+    grid-template-areas: "sidebar header" "sidebar main";
+    height: 100vh;
+}
+
+.top-header { grid-area: header; background: white; border-bottom: 1px solid var(--neutral-200); display: flex; justify-content: space-between; align-items: center; padding: 0 30px; }
+.sidebar { grid-area: sidebar; background: white; border-right: 1px solid var(--neutral-200); padding-top: 20px; text-align: center; }
+.main-content { grid-area: main; overflow-y: auto; padding: 40px; }
+
+
+.card {
+    border-radius: 16px !important; /* Bordes redondeados */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+.card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.card-title { font-size: 1rem; }
+.card-text { font-size: 0.9rem; }
+.primary-button, .btn-primary {
+    background-color: var(--primary-700) !important;
+    border-color: var(--primary-700) !important;
+    font-weight: bold;
+}
+
+.menu-icon, .logo { display: none; }
+.sidebar-nav { margin-top: 20px; padding: 0 20px;}
+.sidebar-nav a { display: flex; align-items: center; gap: 15px; padding: 12px 15px; margin-bottom: 8px; border-radius: 8px; text-decoration: none; color: var(--neutral-800); font-size: 15px; font-weight: 500; }
+.sidebar-nav a:hover, .sidebar-nav a.active { background-color: var(--primary-100); }
+.sidebar-nav a.cart-link { background-color: var(--primary-400); color: white; justify-content: center; font-size: 24px;}
+.header-actions { display: flex; align-items: center; gap: 10px; }
+
+.logo-sidebar {
+    width: 80%;
+    max-width: 150px;
+    margin-bottom: 20px;
+}

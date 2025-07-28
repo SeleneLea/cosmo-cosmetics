@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <a href="{% url 'lista_productos' %}" class="btn btn-light mb-4">← Catálogo</a>
+    
+    <div class="row">
+        <div class="col-md-6">
+            {% if producto.imagen %}
+                <img src="{{ producto.imagen.url }}" class="img-fluid rounded" alt="{{ producto.nombre }}">
+            {% endif %}
+        </div>
+
+        <div class="col-md-6">
+            <h1 class="display-5 fw-bold">{{ producto.nombre }}</h1>
+            <p class="fs-3 my-3">${{ producto.precio }}</p>
+            <p class="lead">{{ producto.descripcion }}</p>
+            
+            <hr class="my-4">
+
+            <div class="d-flex align-items-center gap-3">
+                <div class="form-group">
+                    <label for="cantidad" class="form-label">Unidades</label>
+                    <select class="form-select" id="cantidad" style="width: 100px;">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary primary-button btn-lg">Añadir al Carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
