@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+    <h2 class="display-6 fw-bold">Mi Cuenta</h2>
+{% endblock %}
+
+{% block content %}
+<p>Bienvenido, <strong>{{ user.username }}</strong>.</p>
+<p>Desde aquí podrás editar tu perfil y ver tus pedidos.</p>
+<hr>
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Cerrar Sesión</button>
+</form>
+{% endblock %}
+
+
+
+

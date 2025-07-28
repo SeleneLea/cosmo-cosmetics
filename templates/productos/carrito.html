@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+    <h2 class="display-6 fw-bold">Carrito de Compras</h2>
+{% endblock %}
+
+{% block content %}
+<div class="cart-page-container">
+    <div class="invoice-card">
+        <p class="invoice-subtitle">¡Confirma tu compra y selecciona el metodo!</p>
+        
+        <h3 class="total-title">Total</h3>
+        <p class="total-price">${{ total }}</p>
+        
+        <hr class="invoice-divider">
+        
+        <ul class="invoice-list">
+            {% for item in productos_en_carrito %}
+            <li class="invoice-item">
+                <span class="item-name">• {{ item.producto.nombre }} ({{ item.cantidad }} x ${{ item.precio_unitario }})</span>
+                <span class="item-subtotal">${{ item.subtotal }}</span>
+            </li>
+            {% empty %}
+            <p class="text-center text-muted">Tu carrito está vacío.</p>
+            {% endfor %}
+        </ul>
+        
+        {% if productos_en_carrito %}
+        <form action="{% url 'comprar' %}" method="post" class="d-grid mt-4">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary primary-button">Comprar</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+
+

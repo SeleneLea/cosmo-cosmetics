@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <h2 class="display-6 fw-bold">Acerca de Nosotros</h2>
+{% endblock %}
+
+{% block content %}
+<div class="about-us-container">
+    <div class="banner">
+        <img src="{% static 'images/nosotros-banner.png' %}" alt="Banner de Cosmo Cosmetics" class="banner-image">
+        <div class="banner-text">
+            <h1 class="display-4 fw-bold">Cosmo Cosmetics</h1>
+            <p class="lead">Una tienda de cosméticos, cuidado de la piel, con una visión de la belleza centrada para las personas que buscan un maquillaje rápido y ligero.</p>
+        </div>
+    </div>
+
+    <div class="navigation-links mt-4">
+        <a href="#" class="active"><i class="bi bi-check-lg"></i> Nosotros</a>
+        <a href="#">Contactanos</a>
+    </div>
+
+    <div class="main-content mt-5">
+        <p>Somos una tienda de maquillaje con una filosofía clara: promover una relación saludable y realista con la propia imagen. Nos especializamos en productos que realzan la belleza natural sin distorsionarla ni cubrirla. Preferimos volver a lo básico:</p>
+        <p>La cara real, con textura, con poros, con su expresión única e irrepetible.</p>
+        <p>Entendemos que la industria de la belleza, históricamente, ha tendido a operar sobre la base de la inseguridad, promoviendo estándares idealizados que pocas personas pueden alcanzar sin intervención digital o cosmética. Sabemos que la industria de la belleza muchas veces se alimenta de inseguridades, y por eso creemos que es necesario repensar cómo se presenta y para qué se utiliza el maquillaje en la vida cotidiana.</p>
+        <p>Por eso elegimos productos que respetan la piel, que no la cubren sino que la cuidan, que no prometen una perfección que el rostro no tiene. No ofrecemos bases, iluminadores ni correctores. En cambio, seleccionamos cosméticos ligeros, nutritivos y versátiles, que acompañan el rostro tal como es. Reconocemos también que no todas las personas se ajustan a los mismos parámetros de belleza. Hay rostros más hegemónicos que otros, y eso es una realidad social que no negamos. Pero no creemos que eso deba ser una fuente constante de comparación o malestar.</p>
+        <p>Nos posicionamos a favor de la diversidad visible, sin artificios. Nuestro objetivo es ofrecer una alternativa ética y coherente dentro de una industria que muchas veces empuja hacia la homogeneización. Queremos que cada persona pueda construir una imagen que refleje quién es.</p>
+        <p>Queremos que puedas mirarte al espejo y decirte: “Así como estoy, también está bien.”</p>
+    </div>
+
+    <div class="copyright mt-5 text-muted text-center">
+        © 2025 Cosmo Cosmetics
+    </div>
+</div>
+{% endblock %}
+
+
+
+

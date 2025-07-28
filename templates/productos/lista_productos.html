@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<div class="page-header">
-  <h2 class="display-5 fw-bold">Shopping</h2>
-  </div>
+{% block page_header %}
+    <h2 class="display-5 fw-bold">Shopping</h2>
+    <div class="category-tags">
+      <a href="{% url 'lista_productos' %}" class="{% if not categoria_seleccionada_id %}active{% endif %}">Todos</a>
+      {% for categoria in categorias %}
+        <a href="{% url 'filtrar_por_categoria' categoria.id %}" class="{% if categoria.id == categoria_seleccionada_id %}active{% endif %}">
+            {{ categoria.nombre }}
+        </a>
+      {% endfor %}
+    </div>
+{% endblock %}
 
+{% block content %}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
   {% for producto in productos %}
     <div class="col">
@@ -15,14 +23,16 @@
         <div class="card-body">
           <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
           <p class="card-text text-muted">${{ producto.precio }}</p>
-          <a href="#" class="btn btn-primary w-100 primary-button">Ver Producto</a>
-
           <a href="{% url 'detalle_producto' producto.id %}" class="btn btn-primary w-100 primary-button">Ver Producto</a>
         </div>
       </div>
     </div>
   {% empty %}
-    <div class="col"><p>No hay productos.</p></div>
+    <div class="col">
+      <p class="text-center mt-4">No hay productos en esta categoría.</p>
+    </div>
   {% endfor %}
 </div>
 {% endblock %}
+
+

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <h2 class="display-6 fw-bold">¡Productos en Oferta!</h2>
+{% endblock %}
+
+{% block content %}
+<div class="empty-page-container">
+    <img src="{% static 'images/no-ofertas.png' %}" alt="No hay ofertas" class="empty-page-icon">
+    <p class="lead text-muted mt-3">Ahora mismo no tenemos nuevas ofertas para mostrarte u_u</p>
+</div>
+{% endblock %}

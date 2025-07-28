@@ -18,10 +18,11 @@
             
             <hr class="my-4">
 
-            <div class="d-flex align-items-center gap-3">
+            <form action="{% url 'agregar_al_carrito' producto.id %}" method="post" class="d-flex align-items-center gap-3">
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="cantidad" class="form-label">Unidades</label>
-                    <select class="form-select" id="cantidad" style="width: 100px;">
+                    <select class="form-select" id="cantidad" name="cantidad" style="width: 100px;">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -29,8 +30,8 @@
                         <option>5</option>
                     </select>
                 </div>
-                <button class="btn btn-primary primary-button btn-lg">Añadir al Carrito</button>
-            </div>
+                <button type="submit" class="btn btn-primary primary-button btn-lg">Añadir al Carrito</button>
+            </form>
         </div>
     </div>
 </div>

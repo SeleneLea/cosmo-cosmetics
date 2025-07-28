@@ -68,3 +68,158 @@ body {
     max-width: 150px;
     margin-bottom: 20px;
 }
+
+.empty-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh; /* Ocupa una buena parte de la altura de la pantalla */
+}
+
+.empty-page-icon {
+    width: 120px;
+    height: auto;
+    opacity: 0.6;
+}
+
+/*Estilos para la pagina "Acerca de Nosotros"*/
+.about-us-container { }
+
+.banner {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white; /* El color del texto será blanco */
+}
+
+.banner-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    max-height: 300px; /* Ajusta la altura del banner como necesites */
+    filter: brightness(60%); /* Oscurece la imagen para que el texto resalte */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+.navigation-links a {
+    display: inline-flex;
+    padding: 8px 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--neutral-800);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.navigation-links a.active {
+    background-color: var(--primary-100);
+    color: var(--primary-400);
+}
+
+/* --- Estilos para la pagina del carrito --- */
+.cart-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.invoice-card {
+    background-color: var(--neutral-100);
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.invoice-subtitle {
+    text-align: center;
+    color: #999;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.total-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--neutral-800);
+    margin: 0;
+}
+
+.total-price {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--neutral-900);
+}
+
+.invoice-divider {
+    margin: 1.5rem 0;
+}
+
+.invoice-list {
+    list-style: none;
+    padding: 0;
+}
+
+.invoice-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.item-name {
+    color: var(--neutral-800);
+}
+
+.item-subtotal {
+    font-weight: 500;
+    color: var(--neutral-900);
+}
+
+.category-tags {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.category-tags a {
+  display: inline-block;
+  background-color: var(--neutral-100);
+  color: var(--neutral-800);
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  text-decoration: none;
+  font-size: var(--font-size-etiqueta);
+  border: 1px solid var(--neutral-200);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-tags a:hover {
+    background-color: #EADFF2;
+}
+
+/* estilo para las equiquetas Selecciondas */
+.category-tags a.active {
+  background-color: var(--primary-100);
+  color: var(--primary-400);
+  border-color: var(--primary-200);
+  font-weight: bold;
+}
+
+
+

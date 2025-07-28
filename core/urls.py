@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from productos.views import vista_registro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('productos/', include('productos.urls'),)
+    path('productos/', include('productos.urls')),
+    path('cuentas/registro/', vista_registro, name='registro'),
+    path('cuentas/', include('django.contrib.auth.urls')),
 ]
 
 if settings.DEBUG:
