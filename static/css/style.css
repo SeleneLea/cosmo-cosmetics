@@ -42,7 +42,7 @@ body {
     height: 80px; /* Un poco más de altura */
 }
 
-.logo img {
+.top-header .logo img {
     height: 45px; /* Ajustable */
     width: auto;
 }
@@ -341,26 +341,13 @@ body {
     margin-top: 0.25rem;
 }
 
-.top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
+/* --- Ajustes Finales de Header y Formularios --- */
 .header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    flex-grow: 1;
 }
 
-.logo {
-    height: 40px; /* Altura del logo */
-}
-
-.logo img {
-    height: 100%;
-    width: auto;
+.login-page .auth-card form label {
+    font-weight: normal; /* estilo etiquetas normal */
 }
 
 

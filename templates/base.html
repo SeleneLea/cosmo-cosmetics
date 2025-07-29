@@ -13,9 +13,6 @@
     <div class="page-container">
         
         <header class="top-header">
-            <div class="logo">
-                <img src="{% static 'images/logo.png' %}" alt="Cosmo Cosmetics Logo">
-            </div>
 
             <div class="header-actions">
                 {% if user.is_authenticated %}
@@ -31,6 +28,10 @@
         </header>
 
         <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="{% static 'images/logo.png' %}" alt="Logo de Cosmo Cosmetic" class="logo-sidebar">
+            </div>
+
             <nav class="sidebar-nav">
                 <a href="{% url 'ver_carrito' %}" class="cart-link">🛒</a>
                 <a href="{% url 'lista_productos' %}"><span>🛍️</span><span>Shopping</span></a>
@@ -67,7 +68,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 
 
 

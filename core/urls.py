@@ -19,11 +19,17 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from productos.views import vista_registro
+from django.contrib.auth import views as auth_views
+from productos.forms import LoginForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('productos/', include('productos.urls')),
     path('cuentas/registro/', vista_registro, name='registro'),
+    path('cuentas/login/', auth_views.LoginView.as_view(
+        template_name='registration/login.html',
+        authentication_form=LoginForm
+    ), name='login'),
     path('cuentas/', include('django.contrib.auth.urls')),
 ]
 

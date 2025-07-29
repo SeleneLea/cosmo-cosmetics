@@ -7,4 +7,9 @@ class RegistroForm(UserCreationForm):
         self.fields['username'].label = "Usuario"
 
 class LoginForm(AuthenticationForm):
-    pass
+    def __init__(self, *args, **kwargs):
+        super(LoginForm, self).__init__(*args, **kwargs)
+        self.fields['username'].label = "Usuario"
+        self.fields['password'].label = "Contraseña"
+
+        
