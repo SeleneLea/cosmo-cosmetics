@@ -221,5 +221,128 @@ body {
   font-weight: bold;
 }
 
+/* Ocultamos el sidebar y ajustamos el layout cuando estamos en una auth-page */
+.auth-page .sidebar {
+    display: none;
+}
+
+.auth-page .page-container {
+    grid-template-columns: 1fr; /* Hacemos que el contenido ocupe todo */
+    grid-template-areas: "header" "main";
+}
+
+.auth-page .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+/* Estilo del título sobre la tarjeta */
+.auth-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Estilo de la tarjeta/cuadrícula blanca */
+.auth-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 450px; /* La hacemos más delgada */
+}
+
+/* Estilo para los textos de ayuda de la contraseña */
+.auth-card .helptext {
+    font-size: 0.8rem; /* Letra más pequeña */
+    color: #6c757d; /* Un color gris suave */
+    margin-bottom: 1rem;
+}
+.auth-card .helptext ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* Líneas decorativas en el header */
+.top-header {
+    position: relative;
+}
+
+.top-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--neutral-200);
+}
+
+.logo-container {
+    position: relative;
+    padding-left: 20px;
+}
+
+.logo-container .logo-line-vertical {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 30px; /* Altura de la línea vertical */
+    background-color: var(--neutral-800);
+}
+
+
+.auth-title {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* estilo unificado para todos los textos de ayuda del from */
+.auth-card .helptext, .auth-card form p {
+    font-size: 0.8rem !important;
+    color: #6c757d !important;
+    margin-bottom: 1rem !important;
+    margin-top: -0.5rem;
+}
+
+.auth-card .helptext ul {
+    list-style: none; /* Quitamos los puntos de la lista */
+    padding: 0;
+}
+
+#id_password2 + .helptext {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 40px; /* Altura del logo */
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
 
 
