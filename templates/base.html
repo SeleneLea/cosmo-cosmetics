@@ -13,12 +13,10 @@
     <div class="page-container">
         
         <header class="top-header">
-            <div class="header-left">
-                <div class="menu-icon">☰</div>
-                <div class="logo-container">
-                    <img src="{% static 'images/logo.png' %}" alt="Cosmo Cosmetics Logo" class="logo">
-                </div>
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Cosmo Cosmetics Logo">
             </div>
+
             <div class="header-actions">
                 {% if user.is_authenticated %}
                     <div class="user-profile">
